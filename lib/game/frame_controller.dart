@@ -35,7 +35,7 @@ class FrameController extends StateNotifier<int> {
   /// Starts the frame timer.
   void start() {
     frameTimer = Timer.periodic(
-      const Duration(milliseconds: 8),
+      const Duration(milliseconds: 7),
       (timer) {
         updateFrame();
       },

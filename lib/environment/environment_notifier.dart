@@ -8,4 +8,14 @@ class EnvironmentNotifier extends StateNotifier<Environment> {
       : super(
           const Environment(),
         );
+
+  /// Provides the environment notifier.
+  static final StateNotifierProvider<EnvironmentNotifier, Environment> provider = StateNotifierProvider<EnvironmentNotifier, Environment>(
+    (ref) => EnvironmentNotifier(),
+  );
+
+  /// Provides the environment notifier.
+  void loadEnvironment(Environment environment) {
+    state = environment;
+  }
 }
